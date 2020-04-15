@@ -1,0 +1,6 @@
+SECTIONS
+{
+        .itim : {
+                *(.text .text.*)
+        }
+}
