@@ -1,6 +1,6 @@
 DHRY-LFLAGS =
 
-DHRY-CFLAGS := -O3 -DTIME -DNOENUM -Wno-implicit -save-temps
+DHRY-CFLAGS := -O3 -DMSC_CLOCK -DNOENUM -Wno-implicit -save-temps
 DHRY-CFLAGS += -fno-builtin-printf -fno-common -falign-functions=4
 
 #Uncomment below for FPGA run, default DHRY_ITERS is 2000 for RTL
