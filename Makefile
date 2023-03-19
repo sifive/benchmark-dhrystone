@@ -15,5 +15,5 @@ dhrystone: $(SRC) $(HDR)
 	$(CC) $(CFLAGS) $(SRC) $(LDFLAGS) $(LOADLIBES) $(LDLIBS) -o $@
 
 clean:
-	rm -f *.i *.s *.o dhrystone dhrystone.hex
+	rm -f *.i *.s dhry*.o dhrystone dhrystone.hex
 
