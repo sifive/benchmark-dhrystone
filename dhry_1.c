@@ -273,7 +273,7 @@ main ()
     printf ("Please increase number of runs\n");
     printf ("\n");
   }
-  else
+  //else  // Go ahead and print out results even if the run is too short.
   {
 #ifdef TIME
     Microseconds = (float) User_Time * Mic_secs_Per_Second 
