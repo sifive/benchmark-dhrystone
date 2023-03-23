@@ -15,11 +15,10 @@ DHRY-CFLAGS += -fno-builtin-printf -fno-common -falign-functions=4
 # Given that sometimes Dhrystone measures time in tenths of a second, longer
 # runs reduce the noise from poor clock granularity.
 # But if we are using MSC_CLOCK, it should have pretty good granularity, so let's just run for 100M iterations, to avoid hitting the 2 second auto-detect issue.
-# 10M for quick runs, since the check is commented out.
-DHRY-CFLAGS += -DDHRY_ITERS=10000000
+DHRY-CFLAGS += -DDHRY_ITERS=100000000
 LDFLAGS += -static
 
-SRC = dhry_1.c dhry_2.c
+SRC = dhry_1.c dhry_2.c gettime.c
 STRCMP = lib_a-strcmp.o
 HDR = dhry.h
 
@@ -44,5 +43,5 @@ disasm: all
 	riscv64-unknown-elf-objdump -d dhrystone.llvm > disasm.llvm
 
 clean:
-	rm -f *.i *.s dhry*.o dhrystone dhrystone.hex $(ALL_TARGETS)
+	rm -f *.i *.s dhry*.o gettime.o dhrystone dhrystone.hex $(ALL_TARGETS)
 
