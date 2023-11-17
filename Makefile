@@ -1,5 +1,5 @@
-CC = riscv64-unknown-elf-gcc
-CLANG = riscv64-unknown-elf-clang
+CC = riscv64-unknown-linux-gnu-gcc
+CLANG = riscv64-unknown-linux-gnu-clang
 DHRY-LFLAGS =
 
 DHRY-CFLAGS := -O3 -DMSC_CLOCK -DNOENUM -Wno-implicit -save-temps -fno-inline
