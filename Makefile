@@ -4,6 +4,15 @@ DHRY-LFLAGS =
 
 DHRY-CFLAGS := -O3 -DMSC_CLOCK -DNOENUM -Wno-implicit -save-temps -fno-inline
 DHRY-CFLAGS += -fno-builtin-printf -fno-common -falign-functions=4
+DHRY-CFLAGS += -mcpu=sifive-x280o
+DHRY-CFLAGS += -mcmodel=medany
+DHRY-CFLAGS += -fno-gcse -fno-ipa-pure-const
+DHRY-CFLAGS += -fselective-scheduling -ftracer
+DHRY-CFLAGS += -fno-merge-all-constants
+DHRY-CFLAGS += -mexplicit-relocs
+DHRY-CFLAGS += -falign-functions=4 -fno-expensive-optimizations
+DHRY-CFLAGS += --param max-cse-path-length=1 --param max-pending-list-length=10
+DHRY-CFLAGS += --param max-sched-region-blocks=1 --param selsched-max-lookahead=2
 # This appears to hurt performance by a bit for now, so leave it out. In
 # theory, this should help the compiler generate more
 # conditional-move-optimization-friendly code.
