@@ -1,4 +1,42 @@
 /*
+ * {module name} DHRYSTONE
+ *
+ * {module description}
+ *
+ * Copyright (C) {YEAR} Texas Instruments Incorporated - http://www.ti.com/
+ *
+ *
+ *  Redistribution and use in source and binary forms, with or without
+ *  modification, are permitted provided that the following conditions
+ *  are met:
+ *
+ *    Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ *
+ *    Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the
+ *    distribution.
+ *
+ *    Neither the name of Texas Instruments Incorporated nor the names of
+ *    its contributors may be used to endorse or promote products derived
+ *    from this software without specific prior written permission.
+ *
+ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ *  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+ *  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+ *  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ *  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+ *  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ *  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ *  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ *  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ *  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ *
+*/
+
+/*
  ****************************************************************************
  *
  *                   "DHRYSTONE" Benchmark Program
@@ -357,10 +395,9 @@
 #undef HZ
 #undef TIMES
 #include <time.h>
-//#define HZ	CLK_TCK
-#define HZ	CLOCKS_PER_SEC
+#define HZ     CLK_TCK
 #endif
-		/* Use Microsoft C hi-res clock */
+               /* Use Microsoft C hi-res clock */
 
 #ifdef TIMES
 #include <sys/types.h>
@@ -368,7 +405,7 @@
                 /* for "times" */
 #endif
 
-#define Mic_secs_Per_Second     1000000
+#define Mic_secs_Per_Second     1000000.0
                 /* Berkeley UNIX C returns process times in seconds/HZ */
 
 #ifdef  NOSTRUCTASSIGN
@@ -394,6 +431,8 @@
 
 #include <stdio.h>
                 /* for strcpy, strcmp */
+#include <string.h>
+#include <stdlib.h>
 
 #define Null 0 
                 /* Value of a Null pointer */
@@ -429,4 +468,14 @@ typedef struct record
           } variant;
       } Rec_Type, *Rec_Pointer;
 
-
+void Proc_1 ();
+void Proc_2 ();
+void Proc_3 ();
+void Proc_4 ();
+void Proc_5 ();
+void Proc_6 ();
+void Proc_7 ();
+void Proc_8 ();
+Enumeration Func_1 ();
+Boolean Func_2 ();
+Boolean Func_3 ();
