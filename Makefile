@@ -47,5 +47,5 @@ disasm: all
 	riscv64-unknown-elf-objdump -d dhrystone.llvm > disasm.llvm
 
 clean:
-	rm -f *.i *.s dhry*.o dhrystone dhrystone.hex $(ALL_TARGETS)
+	rm -f *.i *.s dhry*.o dhrystone dhrystone.hex $(ALL_TARGETS)*
 
